@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Software House" />
+    <meta name="description" content="Software House" />
+    <link rel="icon" href="./assets/images/logo2.png" type="image/png" />
+
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="./assets/fontawesome-free-6.4.2-web/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Aliyn</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="overflow-x-hidden">
+    <div class="relative">
+      <!-- navbar big -->
+      <nav class="bg-transparent relative pt-[15px] md:pt-[54px]">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div class="relative flex h-16 items-center justify-between">
+            <!-- Mobile menu button-->
+            <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
+              <button
+                type="button"
+                class="relative inline-flex items-center justify-center rounded-md p-2 text-red-700 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                aria-controls="mobile-menu1"
+                id="button-menu1"
+                aria-expanded="false"
+              >
+                <span class="absolute -inset-0.5"></span>
+                <span class="sr-only">Open main menu</span>
+                <!--
+         Icon when menu is closed.
+
+         Menu open: "hidden", Menu closed: "block"
+       -->
+                <svg
+                  class="block h-8 w-8 open_icon"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  />
+                </svg>
+                <!--
+         Icon when menu is open.
+
+         Menu open: "block", Menu closed: "hidden"
+       -->
+                <svg
+                  class="hidden h-8 w-8 close_icon"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div class="w-full flex justify-between items-center">
+              <!-- navbar big logo -->
+              <div class="flex flex-shrink-0 items-center">
+                <a href="./index.html" class="flex ml-5 lg:ml-0">
+                  <img
+                    class="w-[50px] h-[50px] lg:w-[77px] lg:h-[70px]"
+                    src="./assets/images/logo2.png"
+                    alt="logo Aliyn"
+                  />
+                  <div
+                    class="text-black hidden md:flex text-base lg:text-2xl font-normal font-['Milonga']"
+                  >
+                    Aliyn <br />Software House
+                  </div>
+                </a>
+              </div>
+              <!-- navbar big desktop menu -->
+              <div class="hidden sm:ml-6 sm:block">
+                <div class="flex justify-center items-center gap-[10px]">
+                  <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                  <a
+                    href="./index.html"
+                    aria-current="page"
+                    class="w-[140px] h-[62px] hover:bg-red-700 hover:text-white text-black flex justify-center items-center px-10 py-[18px] rounded-[18px] border-2 border-red-700"
+                  >
+                    <span class="text-xl font-bold font-['Red Hat Display']">
+                      Projects
+                    </span>
+                  </a>
+                  <a
+                    href="./index.html"
+                    class="w-[140px] h-[62px] hover:bg-red-700 hover:text-white text-black flex justify-center items-center px-10 py-[18px] rounded-[18px] border-2 border-red-700"
+                  >
+                    <span class="text-xl font-bold font-['Red Hat Display']">
+                      Process
+                    </span>
+                  </a>
+                  <a
+                    href="./about.html"
+                    class="w-[140px] h-[62px] bg-red-700 text-white flex justify-center items-center px-10 py-[18px] rounded-[18px] border-2 border-red-700"
+                  >
+                    <span class="text-xl font-bold font-['Red Hat Display']">
+                      About
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- navbar big mobile menu -->
+        <div class="hidden" id="mobile-menu1">
+          <div
+            class="space-y-1 absolute right-4 top-[80px] flex gap-[10px] flex-col items-center justify-center w-[181px] h-[212px] bg-zinc-100 rounded-[20px] shadow"
+          >
+            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+            <a
+              href="./index.html"
+              class="w-[135px] h-8 flex justify-center text-red-700 hover:bg-red-700 hover:text-white items-center bg-white rounded-[22px] border border-red-700"
+            >
+              <span class="text-xs font-bold font-['Red Hat Display']"
+                >Home</span
+              >
+            </a>
+            <a
+              href="./index.html"
+              class="w-[135px] h-8 flex justify-center text-red-700 hover:bg-red-700 hover:text-white items-center bg-white rounded-[22px] border border-red-700"
+              aria-current="page"
+            >
+              <span class="text-xs font-bold font-['Red Hat Display']"
+                >Projects</span
+              >
+            </a>
+
+            <a
+              href="./about.html"
+              class="w-[135px] h-8 flex justify-center text-white bg-red-700 hover:text-white items-center rounded-[22px] border border-red-700"
+            >
+              <span class="text-xs font-bold font-['Red Hat Display']"
+                >About</span
+              >
+            </a>
+            <a
+              href="./contact.html"
+              class="w-[135px] h-8 flex justify-center text-red-700 hover:bg-red-700 hover:text-white items-center rounded-[22px] border border-red-700"
+            >
+              <span class="text-xs font-bold font-['Red Hat Display']"
+                >Contact Us</span
+              >
+            </a>
+          </div>
+        </div>
+      </nav>
+      <!-- navbar small -->
+      <nav
+        class="navbar_small hidden justify-end md:justify-center fixed top-10 right-[10px] left-0 z-[100]"
+      >
+        <div
+          class="relative md:hidden h-11 pl-8 pr-4 py-1 bg-white rounded-3xl border border-neutral-200 justify-center items-center gap-8 flex"
+        >
+          <div class="px-2 sm:px-6 lg:px-8">
+            <div class="flex h-14 items-center justify-center">
+              <!-- navbar small logo -->
+              <div class="absolute top-[6px] right-[15px] flex sm:hidden">
+                <!-- Mobile menu button-->
+                <button
+                  type="button"
+                  class="relative inline-flex items-center justify-center rounded-md text-gray-400 hover:bg-gray-500 hover:text-white"
+                  aria-controls="mobile-menu2"
+                  id="button-menu2"
+                  aria-expanded="false"
+                >
+                  <span class="absolute -inset-0.5"></span>
+                  <span class="sr-only">Open main menu</span>
+
+                  <svg
+                    class="block h-8 w-8 open_icon_two"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                    />
+                  </svg>
+                  <!--
+         Icon when menu is open.
+
+         Menu open: "block", Menu closed: "hidden"
+       -->
+                  <svg
+                    class="hidden h-8 w-8 close_icon_two"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <!-- navbar small desktop menu -->
+              <!-- <div
+                class="flex flex-1 gap-[200px] items-center sm:items-stretch sm:justify-start"
+              >
+                <div class="hidden sm:ml-6 sm:block">
+                  <div class="flex justify-center items-center gap-x-[35px]">
+                  
+                    <a
+                      href="./index.html"
+                      class="text-neutral-800 text-[13px] font-semibold font-['Inter']"
+                      aria-current="page"
+                      >Projects</a
+                    >
+                    <a
+                      href="./index.html"
+                      class="text-neutral-800 text-[13px] font-semibold font-['Inter']"
+                      >Process</a
+                    >
+                    <a
+                      href="./about.html"
+                      class="bg-red-700 w-[90px] h-7 py-1.5 rounded-2xl flex justify-center items-center text-white text-[13px] font-semibold font-['Inter']"
+                      >About</a
+                    >
+                    <a
+                      href="./contact.html"
+                      class="text-neutral-800 w-[80px] text-[13px] font-semibold font-['Inter']"
+                    >
+                      Contact us
+                    </a>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+
+          <!-- navbar small mobile menu  -->
+          <div class="hidden" id="mobile-menu2">
+            <div
+              class="space-y-1 absolute right-4 top-[50px] flex gap-[10px] flex-col items-center justify-center w-[181px] h-[212px] bg-zinc-100 rounded-[20px] shadow"
+            >
+              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+              <a
+                href="./index.html"
+                class="w-[135px] h-8 flex justify-center text-red-700 hover:bg-red-700 hover:text-white items-center bg-white rounded-[22px] border border-red-700"
+              >
+                <span class="text-xs font-bold font-['Red Hat Display']"
+                  >Home</span
+                >
+              </a>
+              <a
+                href="./index.html"
+                class="w-[135px] h-8 flex justify-center text-red-700 hover:bg-red-700 hover:text-white items-center bg-white rounded-[22px] border border-red-700"
+                aria-current="page"
+              >
+                <span class="text-xs font-bold font-['Red Hat Display']"
+                  >Projects</span
+                >
+              </a>
+
+              <a
+                href="./about.html"
+                class="w-[135px] h-8 flex justify-center text-white bg-red-700 hover:text-white items-center rounded-[22px] border border-red-700"
+              >
+                <span class="text-xs font-bold font-['Red Hat Display']"
+                  >About</span
+                >
+              </a>
+              <a
+                href="./contact.html"
+                class="w-[135px] h-8 flex justify-center text-red-700 hover:bg-red-700 hover:text-white items-center rounded-[22px] border border-red-700"
+              >
+                <span class="text-xs font-bold font-['Red Hat Display']"
+                  >Contact Us</span
+                >
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="flex justify-center mt-[50px] lg:mt-[50px]">
+        <a
+          href="
+        #"
+          class="w-[105px] h-[29px] rounded-lg border border-zinc-600 flex flex-row items-center justify-evenly"
+        >
+          <img src="./assets/icons/location.svg" class="w-[13px] h-[18px]"
+          alt="location icon />
+
+          <p
+            class="text-zinc-600 text-sm pl-3 border-l border-zinc-600 font-normal font-['Inter']"
+          >
+            Egypt
+          </p>
+        </a>
+      </div>
+      <div
+        class="flex flex-col pl-[15px] lg:pl-[70px] 2xl:pl-[230px] mt-[50px] lg:mt-[13px]"
+      >
+        <div
+          class="text-black text-[34px] lg:text-[60px] font-medium font-['Red Hat Display'] capitalize"
+        >
+          <span class="">You </span>
+          <span
+            class="text-red-700 font-medium font-['Red Hat Display'] capitalize"
+            >Think,</span
+          >
+        </div>
+        <div>
+          <span
+            class="text-black text-[34px] lg:text-[60px] font-medium font-['Red Hat Display'] capitalize"
+            >We Make IT
+          </span>
+          <span
+            class="text-red-700 text-[34px] lg:text-[60px] font-medium font-['Red Hat Display'] capitalize"
+            >Happens</span
+          >
+        </div>
+      </div>
+      <div
+        class="absolute top-[245px] right-0 w-[304px] h-[304px] lg:w-[511px] lg:h-[911px]"
+      >
+        <img src="./assets/images/group about.png" alt="circles image" />
+      </div>
+
+      <div class="flex justify-center flex-col items-center mx-[10px] lg:mx-0">
+        <div
+          class="relative z-[1] mt-[80px] w-auto lg:w-[75%] h-auto bg-white rounded-3xl border-2 border-red-700"
+        >
+          <div
+            class="py-[20px] lg:py-[20px] pl-[16px] lg:pl-[20px] border-b-2 border-red-700"
+          >
+            <p
+              class="text-red-700 text-sm lg:text-[26px] font-extrabold font-['Red Hat Display']"
+            >
+              Who we are
+            </p>
+          </div>
+          <div class="px-[16px] py-[10px] lg:px-[20px] lg:py-[12px]">
+            <div
+              class="lg:w-[917px] flex flex-wrap flex-col gap-3 text-black text-[11px] lg:text-xl font-normal font-['Red Hat Display']"
+            >
+              <p>Introducing Alyyn - Your Ultimate Software House Solution</p>
+              <p>
+                Are you in need of top-notch software house services? Look no
+                further than Alyyn! Our cutting-edge technology and expert team
+                make us the perfect partner for all your software development
+                needs.
+              </p>
+              <p>
+                With Alyyn, you can expect nothing but excellence. Our services
+                include but are not limited to:
+              </p>
+              <div class="flex flex-col gap-5">
+                <div>
+                  <button
+                    class="dropdown-btn flex justify-center items-center gap-2"
+                    onclick="toggleDropdown(1)"
+                  >
+                    1. Custom Software Development
+                    <span>
+                      <img
+                        src="./assets/icons/arrowbold.svg"
+                        class="arrow_dropdown-1 w-3/4 lg:w-full"
+                        alt="arrow bold"
+                      />
+                    </span>
+                  </button>
+
+                  <!-- Dropdown content here -->
+                  <p id="dropdown-content-1" class="dropdown-content">
+                    We understand that your business is unique, which is why we
+                    offer tailor-made software solutions that align perfectly
+                    with your requirements. From concept to implementation,
+                    we've got you covered.
+                  </p>
+                </div>
+                <div>
+                  <button
+                    class="dropdown-btn flex justify-center items-center gap-2"
+                    onclick="toggleDropdown(2)"
+                  >
+                    2. Web and Mobile Application
+                    <span>
+                      <img
+                        src="./assets/icons/arrowbold.svg"
+                        class="arrow_dropdown-2 w-3/4 lg:w-full"
+                        alt="arrow bold"
+                      />
+                    </span>
+                  </button>
+
+                  <!-- Dropdown content here -->
+                  <p id="dropdown-content-2" class="dropdown-content">
+                    Stay ahead of the game with our innovative web and mobile
+                    application development services. Our skilled developers
+                    create seamless and user-friendly applications that will
+                    leave a lasting impression on your customers.
+                  </p>
+                </div>
+                <div>
+                  <button
+                    class="dropdown-btn flex justify-center items-center gap-2"
+                    onclick="toggleDropdown(3)"
+                  >
+                    3. Quality Assurance and Testing:
+                    <span>
+                      <img
+                        src="./assets/icons/arrowbold.svg"
+                        class="arrow_dropdown-3 w-3/4 lg:w-full"
+                        alt="arrow bold"
+                      />
+                    </span>
+                  </button>
+
+                  <!-- Dropdown content here -->
+                  <p id="dropdown-content-3" class="dropdown-content">
+                    At Alyyn, quality is our top priority. Our dedicated QA team
+                    ensures that every software product we deliver meets the
+                    highest standards. From functionality to performance, we
+                    leave no stone unturned.
+                  </p>
+                </div>
+                <div>
+                  <button
+                    class="dropdown-btn flex justify-center items-center gap-2"
+                    onclick="toggleDropdown(4)"
+                  >
+                    4. Software Maintenance and Support:
+                    <span>
+                      <img
+                        src="./assets/icons/arrowbold.svg"
+                        class="arrow_dropdown-4 w-3/4 lg:w-full"
+                        alt="arrow bold"
+                      />
+                    </span>
+                  </button>
+
+                  <!-- Dropdown content here -->
+                  <p id="dropdown-content-4" class="dropdown-content">
+                    We believe in building long-term relationships with our
+                    clients. That's why our services extend beyond development.
+                    Our team provides ongoing maintenance and support to ensure
+                    your software operates smoothly and efficiently.
+                  </p>
+                </div>
+                <div>
+                  <button
+                    class="dropdown-btn flex justify-center items-center gap-2"
+                    onclick="toggleDropdown(5)"
+                  >
+                    5. UI/UX Design:
+                    <span>
+                      <img
+                        src="./assets/icons/arrowbold.svg"
+                        class="arrow_dropdown-5 w-3/4 lg:w-full"
+                        alt="arrow bold"
+                      />
+                    </span>
+                  </button>
+
+                  <!-- Dropdown content here -->
+                  <p id="dropdown-content-5" class="dropdown-content">
+                    Aesthetics matter, and we understand the importance of a
+                    visually appealing user interface. Our talented designers
+                    create intuitive and captivating designs that enhance the
+                    user experience, making your software a joy to use.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-end w-1/2">
+          <div class="w-[2px] h-[60px] lg:h-[80px] bg-red-700"></div>
+        </div>
+        <div
+          class="w-auto h-auto relative md:w-full z-[1] lg:w-[75%] lg:h-auto bg-white rounded-3xl border-2 border-red-700"
+        >
+          <div
+            class="py-[20px] lg:py-[20px] pl-[16px] lg:pl-[20px] border-b-2 border-red-700"
+          >
+            <p
+              class="text-red-700 text-sm lg:text-[26px] font-extrabold font-['Red Hat Display']"
+            >
+              Our Vision
+            </p>
+          </div>
+          <div class="px-[16px] py-[10px] lg:px-[20px] lg:py-[20px]">
+            <p
+              class="lg:w-[940px] text-black text-[11px] lg:text-xl font-normal font-['Red Hat Display']"
+            >
+              To become a Premier Service provider by continuously achieving
+              superior financial and operating results while adhering to the
+              highest standards of business conduct.
+            </p>
+          </div>
+        </div>
+        <div class="flex justify-start w-1/2">
+          <div class="w-[2px] h-[60px] lg:h-[80px] bg-red-700"></div>
+        </div>
+        <div
+          class="lg:w-[75%] relative z-[1] w-auto h-auto lg:h-auto bg-white rounded-3xl border-2 border-red-700"
+        >
+          <div
+            class="py-[20px] lg:py-[20px] pl-[16px] lg:pl-[20px] border-b-2 border-red-700"
+          >
+            <p
+              class="text-red-700 text-sm lg:text-[26px] font-extrabold font-['Red Hat Display']"
+            >
+              Our Mission
+            </p>
+          </div>
+          <div class="px-[16px] py-[10px] lg:px-[20px] lg:py-[20px]">
+            <p
+              class="lg:w-[940px] text-black text-[11px] lg:text-xl font-normal font-['Red Hat Display']"
+            >
+              Our mission at ALIYN is to empower businesses and individuals with
+              innovative software solutions. We strive to deliver top-quality
+              software products that enhance productivity, efficiency, and user
+              experience. Through our dedication to excellence, customer
+              satisfaction, and continuous improvement, we aim to be the go-to
+              destination for cutting-edge software solutions. At ALIYN, we are
+              committed to continuously pushing the boundaries of technology
+              providing reliable software solutions that exceed our customers'
+              expectations.
+            </p>
+          </div>
+        </div>
+        <div class="flex justify-end w-1/2">
+          <div class="w-[2px] h-[60px] lg:h-[80px] bg-red-700"></div>
+        </div>
+        <div
+          class="w-auto lg:w-[75%] relative z-[1] mb-[60px] lg:mb-[70px] h-auto md:h-auto bg-white rounded-3xl border-2 border-red-700"
+        >
+          <div
+            class="py-[20px] lg:py-[20px] pl-[16px] lg:pl-[20px] border-b-2 border-red-700"
+          >
+            <p
+              class="text-red-700 text-sm lg:text-[26px] font-extrabold font-['Red Hat Display']"
+            >
+              You
+            </p>
+          </div>
+          <div class="px-[16px] py-[10px] lg:px-[20px] lg:pt-[20px]">
+            <p
+              class="text-black text-[11px] lg:text-xl font-normal font-['Red Hat Display']"
+            >
+              Are you in need of top-notch software house services? Look no
+              further than Alyin! Our cutting-edge technology and expert team
+              make us the perfect partner for all your software development
+              needs.
+            </p>
+
+            <div
+              class="flex justify-end lg:pb-[20px] pb-[20px] pt-[11px] lg:pt-8 w-full h-full"
+            >
+              <a href="./contact.html">
+                <div
+                  class="w-[110px] h-10 px-4 py-3 lg:w-[206px] lg:h-[70px] flex justify-center items-center lg:px-10 lg:py-6 text-xs lg:text-xl hover:bg-red-700 hover:text-white font-bold font-['Red Hat Display'] rounded-[18px] text-black border-2 border-red-700"
+                >
+                  <span>Contact us</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+ <!-- footer -->
+ <div
+ class="w-auto flex overflow-hidden flex-col h-auto lg:h-[429px] relative bg-red-700"
+>
+ <div
+   class="relative z-[99] flex gap-2 lg:gap-5 lg:my-0 pt-[50px] md:pt-[90px] justify-center items-center"
+ >
+   <p
+     class="text-white text-[27px] lg:text-[80px] font-normal font-['Red Hat Display']"
+   >
+     Get in touch
+   </p>
+   <img
+     src="./assets/icons/arrowfooter.svg"
+     class="w-[23px] h-[21px] lg:h-[77px] lg:w-[85px]"
+     alt="arrow footer"
+   />
+ </div>
+ <div
+   class="absolute top-0 z-[1] left-0 h-[126px] w-[157px] lg:w-[636px] lg:h-[726px]"
+ >
+   <img src="./assets/images/footerimage.png" alt="" />
+ </div>
+ <div
+   class="absolute top-[100px] opacity-50 lg:opacity-100 lg:top-[183px] z-[0] right-0 w-[172px] h-[125px] lg:w-[387px] lg:h-[332.74px]"
+ >
+   <img src="./assets/images/footerimage2.png" alt="" />
+ </div>
+
+ <div
+   class="w-auto h-auto md:pt-[20px] flex pb-[25px] flex-col items-center gap-5 justify-center"
+ >
+   <div class="relative z-[99] flex flex-row justify-between lg:gap-5">
+     <a
+       href="mailto:Alyinsoftwarehouse@gmail.com"
+       target="_blank"
+       class="w-[60px] h-[60px] lg:w-[68px] lg:h-[68px] p-2.5 justify-start items-start gap-2.5 inline-flex"
+     >
+       <i
+         class="fa-solid fa-envelope text-[40px] lg:text-[48px] text-white hover:text-[#000]"
+       ></i>
+     </a>
+     <a
+       href="https://www.linkedin.com/company/aliyn/"
+       target="_blank"
+       class="w-[60px] h-[60px] lg:w-[68px] lg:h-[68px] p-2.5 justify-start items-start gap-2.5 inline-flex"
+     >
+       <i
+         class="fa-brands fa-linkedin text-[40px] lg:text-[48px] text-white hover:text-[#0077B5]"
+       ></i>
+     </a>
+     <a
+       href="https://wa.me/201004673894"
+       target="_blank"
+       class="w-[60px] h-[60px] lg:w-[68px] lg:h-[68px] p-2.5 justify-start items-start gap-2.5 inline-flex"
+     >
+       <i
+         class="fa-brands fa-square-whatsapp text-[40px] lg:text-[48px] text-white hover:text-[#25D366]"
+       ></i>
+     </a>
+
+     <a
+       href="https://www.facebook.com/profile.php?id=100094593168418&mibextid=LQQJ4d"
+       target="_blank"
+       class="w-[60px] h-[60px] lg:w-[68px] lg:h-[68px] p-2.5 justify-start items-start gap-2.5 inline-flex"
+     >
+       <i
+         class="text-[40px] lg:text-[48px] fa-brands fa-square-facebook text-white hover:text-[#4267B2]"
+       ></i>
+     </a>
+     <a
+       href="https://instagram.com/aliyn_softwarehouse?igshid=MzRlODBiNWFlZA=="
+       target="_blank"
+       class="w-[60px] h-[60px] lg:w-[68px] lg:h-[68px] p-2.5 justify-start items-start gap-2.5 inline-flex"
+     >
+       <i
+         class="text-[40px] lg:text-[48px] fa-brands fa-instagram text-white hover:text-[#C13584]"
+       ></i>
+     </a>
+   </div>
+   <div>
+     <p
+       class="text-white text-[15px] lg:text-[28px] font-normal font-['Red Hat Display']"
+     >
+       Alyinsoftwarehouse@gmail.com
+     </p>
+   </div>
+ </div>
+</div>
+    <script src="./js/nav.js"></script>
+  </body>
+</html>
